@@ -3,51 +3,292 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Special Offer</title>
+    <title>leadsleapproad - Achieve 55%+ Email Open Rates!</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
+        * {
             margin: 0;
             padding: 0;
-            background-color: #f5f5f5;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
         }
         .container {
             max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
+            width: 100%;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            overflow: hidden;
         }
-        .image-container {
-            margin: 20px 0;
-        }
-        .btn {
-            display: inline-block;
-            padding: 15px 30px;
-            background-color: #FF6600;
+        header {
+            text-align: center;
+            padding: 40px 30px;
+            background: linear-gradient(to right, #2563eb, #1d4ed8);
             color: white;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 5px;
-            margin: 20px 0;
-            transition: background-color 0.3s;
         }
-        .btn:hover {
-            background-color: #E55C00;
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+        .cover-image {
+            width: 100%;
+            border-bottom: 5px solid #2563eb;
+        }
+        .content {
+            padding: 40px;
+        }
+        .form-container {
+            background: #f9fafb;
+            padding: 30px;
+            border-radius: 10px;
+            margin: 30px 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            border: 1px solid #e5e7eb;
+        }
+        .form-title {
+            text-align: center;
+            color: #2563eb;
+            margin-bottom: 25px;
+            font-size: 1.5rem;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #374151;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+        .form-group input:focus {
+            border-color: #2563eb;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+        }
+        button {
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(to right, #f59e0b, #d97706);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(245, 158, 11, 0.4);
+        }
+        button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(245, 158, 11, 0.5);
+        }
+        .confirm-text {
+            text-align: center;
+            font-size: 1.2rem;
+            margin: 25px 0;
+            color: #059669;
+            font-weight: 700;
+            padding: 15px;
+            background-color: #ecfdf5;
+            border-radius: 8px;
+            border: 2px dashed #10b981;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+            100% { transform: scale(1); }
+        }
+        .guarantee {
+            text-align: center;
+            padding: 15px;
+            background-color: #eff6ff;
+            border-radius: 8px;
+            border: 1px dashed #3b82f6;
+            margin: 25px 0;
+        }
+        .banner-container {
+            background: #1f2937;
+            color: white;
+            padding: 15px 0;
+            overflow: hidden;
+            position: relative;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        .banner {
+            display: flex;
+            animation: banner-scroll 30s linear infinite;
+            white-space: nowrap;
+        }
+        .banner-item {
+            padding: 0 30px;
+            flex-shrink: 0;
+        }
+        .banner-link {
+            color: #fbbf24;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        .banner-link:hover {
+            color: #f59e0b;
+            text-decoration: underline;
+        }
+        @keyframes banner-scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #6b7280;
+            font-size: 0.9rem;
+            background: #f9fafb;
+            border-top: 1px solid #e5e7eb;
+        }
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            .content {
+                padding: 25px;
+            }
+            .banner {
+                animation: banner-scroll 45s linear infinite;
+            }
+        }
+        
+        /* leadsleapproad styling */
+        .leadsleapproad {
+            position: absolute;
+            opacity: 0.001;
+            height: 1px;
+            width: 1px;
+            overflow: hidden;
         }
     </style>
 </head>
 <body>
+    <!-- leadsleapproad -->
+    <div class="leadsleapproad">leadsleapproad</div>
+    
     <div class="container">
-        <h1>Limited Time Offer!</h1>
-        <p>Don't miss this incredible opportunity. Click the button below to learn more.</p>
-        
-        <div class="image-container">
-            <img src="https://affiliatesstuff.s3.us-east-1.amazonaws.com/PSMJ/PSMJ%20Banners/Banner%20image%202/High-res%20PNG/Image%202%20-%201080x1920.png" alt="Special Offer" style="max-width: 100%; height: auto;">
+        <header>
+            <h1>Achieve 55%+ Email Open Rates!</h1>
+            <p class="subtitle">Don't Believe Us? You Will After Seeing This...</p>
+        </header>
+
+        <img src="https://scalableplrproducts.com/wp-content/uploads/2024/12/Snap-Proof-How-to-Write-Emails-That-Get-55-Open-Rates.jpg" alt="55% Open Rates Guide" class="cover-image">
+
+        <div class="content">
+            <div class="banner-container">
+                <div class="banner">
+                    <div class="banner-item">
+                        <a href="https://artnabersl.github.io/buyertrafficseite/" class="banner-link" target="_blank">How To Get USA Buyers Traffic</a>
+                    </div>
+                    <div class="banner-item">
+                        <a href="https://artnabersl.github.io/clickgenerator5monat/" class="banner-link" target="_blank">BEST AUTOPILOT BUYERS TRAFFIC</a>
+                    </div>
+                    <div class="banner-item">
+                        <a href="https://artnabersl.github.io/ebooks/" class="banner-link" target="_blank">GET THIS FREE NOW: Money-Making E-Books + Exclusive Bonuses!</a>
+                    </div>
+                    <!-- Duplicate items for continuous scrolling -->
+                    <div class="banner-item">
+                        <a href="https://artnabersl.github.io/buyertrafficseite/" class="banner-link" target="_blank">How To Get USA Buyers Traffic</a>
+                    </div>
+                    <div class="banner-item">
+                        <a href="https://artnabersl.github.io/clickgenerator5monat/" class="banner-link" target="_blank">BEST AUTOPILOT BUYERS TRAFFIC</a>
+                    </div>
+                    <div class="banner-item">
+                        <a href="https://artnabersl.github.io/ebooks/" class="banner-link" target="_blank">GET THIS FREE NOW: Money-Making E-Books + Exclusive Bonuses!</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-container">
+                <h2 class="form-title">Get Instant Access Now</h2>
+                
+                <form method="post" action="https://www.sendsteed.com/subscribe/">
+                    <div class="form-group">
+                        <label for="email">Your Email Address</label>
+                        <input name="e108028" required type="email" placeholder="your@email.com" id="email">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input name="n108028" required type="text" placeholder="First Name" id="name">
+                    </div>
+                    
+                    <input type="hidden" name="lllid" value="108028">
+                    <input type="hidden" name="lluid" value="sandyarta">
+                    <input type="hidden" name="redirect" value="">
+                    <input type="hidden" name="source" value="55emailleadsleaproad">
+                    
+                    <button type="submit">GET INSTANT ACCESS NOW</button>
+                </form>
+                
+                <p class="confirm-text">Confirm your email and you'll be redirected to the special offer!</p>
+            </div>
+            
+            <div class="guarantee">
+                <h3>✅ 30-Day Money-Back Guarantee</h3>
+                <p>We're so confident you'll get results that we offer a full money-back guarantee. Zero risk!</p>
+            </div>
         </div>
         
-        <a href="https://18406srnha4fhhkj24j6qcj7py.hop.clickbank.net/?&traffic_source=leadsleap" class="btn">CLICK HERE</a>
-        
-        <p>This offer is only available for a limited time. Act now!</p>
+        <footer>
+            <p>© 2023 leadsleapproad. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            <p>This site is not affiliated with any social media platforms.</p>
+        </footer>
     </div>
+
+    <!-- leadsleapproad -->
+    <script>
+        // leadsleapproad tracking code
+        document.addEventListener('DOMContentLoaded', function() {
+            // Form submission tracking for leadsleapproad
+            const form = document.querySelector('form');
+            if (form) {
+                form.addEventListener('submit', function() {
+                    console.log('leadsleapproad - Form submitted');
+                    // In a real scenario, you would send tracking data to your analytics
+                });
+            }
+            
+            // leadsleapproad banner interaction tracking
+            const bannerLinks = document.querySelectorAll('.banner-link');
+            bannerLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    console.log('leadsleapproad - Banner link clicked: ' + this.href);
+                });
+            });
+        });
+    </script>
 </body>
 </html>
